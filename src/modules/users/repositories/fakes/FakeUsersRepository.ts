@@ -30,7 +30,7 @@ class UsersRepository implements IUsersRepository {
 
   public async findByEmail(email: string): Promise<User | undefined> {
     const findUser = this.users.find(user => user.email === email);
-    console.log('findeduser', findUser);
+
     return findUser;
   }
 
