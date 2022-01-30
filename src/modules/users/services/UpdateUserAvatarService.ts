@@ -1,3 +1,4 @@
+import { injectable, inject } from 'tsyringe';
 import path from 'path';
 import fs from 'fs';
 
@@ -7,7 +8,6 @@ import uploadConfig from '@config/upload';
 
 import User from '@modules/users/infra/typeorm/entities/User';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import { injectable, inject } from 'tsyringe';
 
 interface IRequest {
   user_id: string;
