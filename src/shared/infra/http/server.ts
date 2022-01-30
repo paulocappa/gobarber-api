@@ -13,7 +13,7 @@ import routes from './routes';
 const server = express();
 
 server.use(express.json());
-server.use('/files', express.static(uploadConfig.directory));
+server.use('/files', express.static(uploadConfig.uploadsFolder));
 server.use(routes);
 
 server.use((error: Error, _: Request, res: Response, __: NextFunction) => {
