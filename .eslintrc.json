@@ -22,14 +22,22 @@
         "no-use-before-define": "off",
         "class-methods-use-this": "off",
         "camelcase": "off",
+        "no-useless-constructor": "off",
+        "@typescript-eslint/naming-convention": ["error", {
+          "selector": "interface",
+          "format": ["PascalCase"],
+          "custom": {
+            "regex": "^I[A-Z]",
+            "match": true
+          }
+        }],
         "@typescript-eslint/no-use-before-define": [
             "error"
         ],
         "@typescript-eslint/no-unused-vars": [
           "error",
           {
-            "argsIgnorePattern": "_*",
-            "paramsIgnorePattern": "_*"
+            "argsIgnorePattern": "_*"
           }
         ],
         "import/extensions": [
