@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+import { instanceToInstance } from 'class-transformer';
 
 import CreateUserService from '@modules/users/services/CreateUserService';
 
@@ -15,9 +16,7 @@ class UsersController {
       password,
     });
 
-    delete user.password;
-
-    return res.json(user);
+    return res.json(instanceToInstance(user));
   }
 }
 
